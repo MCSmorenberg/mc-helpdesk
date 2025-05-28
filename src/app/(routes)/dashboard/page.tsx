@@ -1,9 +1,9 @@
 'use client'
 import Image from "next/image";
 
-import { main } from "./api/groq/main";
+import { main } from "../../api/groq/main";
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <main>
       <h2>Dashboard</h2>

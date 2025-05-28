@@ -6,7 +6,8 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 export async function main() {
   const chatCompletion = await getGroqChatCompletion();
   
-  console.log(chatCompletion.choices[0]?.message?.content || "");
+  // console.log(chatCompletion.choices[0]?.message?.content || "");
+  console.log("Jibber jabber");
 }
 
 export async function getGroqChatCompletion() {
