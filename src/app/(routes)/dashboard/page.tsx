@@ -1,13 +1,12 @@
 'use client'
 import Image from "next/image";
-
-import { main } from "../../api/groq/main";
+import Chat from "../../../components/Chat";
 
 export default function Dashboard() {
   return (
     <main>
       <h2>Dashboard</h2>
-      <button onClick={() => main()}>Say something..</button>
+      <Chat />
     </main>
   );
 }
