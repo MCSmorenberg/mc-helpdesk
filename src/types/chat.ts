@@ -20,4 +20,4 @@ export interface Conversation {
     model_id: string;
     message_count: number;
     messages: Message[];
-  }
+}
