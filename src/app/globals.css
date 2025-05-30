@@ -3,6 +3,7 @@
 @theme {
   /* --color-primary: #7856ff; */
   --color-primary: #0251f0;
+  --color-secondary: #ebf0fa;
 }
 
 body {
@@ -46,6 +47,8 @@ main nav {
 button {
   @apply
     px-3 py-2
+    bg-primary
+    text-white
     rounded-sm
     flex justify-between items-center gap-2
     text-sm;
@@ -61,4 +64,36 @@ button:hover {
 
 .btn-secondary {
   @apply bg-gray-200 text-gray-900;
+}
+
+form {
+  @apply
+    py-4 px-7
+    bg-white
+    opacity-50
+    /* border-gray-600 */
+    border-2 border-solid
+    rounded-md
+    /* block */
+    w-full max-w-2/3;
+}
+
+form label {
+  @apply block;
+}
+
+form input,
+form textarea,
+form select {
+  @apply
+  /* border-gray-600 */
+  /* border-1 border-solid */
+  /* block */
+  bg-secondary
+  mt-2 my-4 px-2 py-1
+  rounded-sm w-full;
+}
+
+form button {
+  @apply block mx-auto;
 }

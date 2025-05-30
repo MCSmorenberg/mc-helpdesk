@@ -37,9 +37,11 @@ const Chat = () => {
       </form>
       {isThinking ? (
         <p>Thinking...</p>
-      ) : answer && (
+    //   ) : answer && (
+      ) : true && (
         <div>
           <h3>Response:</h3>
+          <p>Lots of text and stuff...</p>
           <p>{answer}</p>
         </div>
       )}
