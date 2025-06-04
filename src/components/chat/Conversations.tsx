@@ -1,4 +1,6 @@
-import { Conversation } from "../types/chat";
+import Link from "next/link"
+
+import { Conversation } from "../../types/chat";
 
 async function getConvesations() {
    const res = await fetch('http://localhost:4000/data',
@@ -12,14 +14,16 @@ async function getConvesations() {
    return res.json();
 }
 
-export async function ChatBar() {
+export async function Conversations() {
    const conversations = await getConvesations();
 
    return(
       <>
          {conversations.map((conversation: Conversation) => (
             <div key={conversation.id}>
-               <h3>{conversation.name}</h3>
+               <Link href={`/chat/${conversation.id}`}>
+                  <h3>{conversation.name}</h3>
+               </Link>
             </div>
          ))}
          {conversations.length === 0 && (

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import { getGroqChatCompletion } from '../app/api/groq/main';
+import { getGroqChatCompletion } from '../../app/api/groq/main';
 
 const Chat = () => {
   const [question, setQuestion] = useState('');
