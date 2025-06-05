@@ -26,11 +26,10 @@ async function getConversation(id: any) {
 
 
 export default async function ConversationComponent( { params }: any) {
-    // console.log('params', params.id)
     const conversation = await getConversation(params.id);
-  return (
-    <main>
-        <p>{conversation.name}</p>
-    </main>
-  );
+    return (
+        <main>
+            <p>{conversation.name}</p>
+        </main>
+    );
 }
