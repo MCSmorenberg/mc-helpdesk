@@ -1,15 +1,27 @@
 import {Conversation} from "@/src/types/chat"
+import {notFound} from "next/navigation";
+
+export const dynamicParams = true // Default is true
+
+export async function generateStaticParams() {
+    const res = await fetch('http://localhost:4000/data');
+    const conversations = await res.json();
+
+    return conversations.map((conversation: any) => ({
+        id: conversation.id
+    }))
+}
 
 async function getConversation(id: any) {
-   const res = await fetch('http://localhost:4000/data/' + id,
-      {
-         next: {
+    const res = await fetch('http://localhost:4000/data/' + id, {
+        next: {
             revalidate: 60,
-         }
-      }
-   );
-
-   return res.json();
+        }
+    });
+    if (!res.ok) {
+        notFound()
+    }
+    return res.json();
 }
 
 
