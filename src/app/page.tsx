@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Dashboard from "./(routes)/dashboard/page";
+import Dashboard from "./(routes)/chat/page";
 
 export default function Home() {
   return <Dashboard />;

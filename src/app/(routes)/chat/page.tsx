@@ -1,11 +1,10 @@
-'use client'
 import Image from "next/image";
-import Chat from "../../../components/Chat";
+import Chat from "../../../components/chat/Chat";
 
 export default function Dashboard() {
   return (
     <main>
-      <h2>Dashboard</h2>
+      <h2>Chat Dashboard</h2>
       <Chat />
     </main>
   );
