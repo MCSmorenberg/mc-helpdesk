@@ -14,7 +14,7 @@ async function getConvesations() {
    return res.json();
 }
 
-export async function Conversations() {
+export async function ConversationsList() {
    const conversations = await getConvesations();
 
    return(

@@ -1,5 +1,6 @@
 import {Conversation} from "@/src/types/chat"
 import {notFound} from "next/navigation";
+import ConversationComponent from "../../../../components/chat/Conversation";
 
 export const dynamicParams = true // Default is true
 
@@ -25,11 +26,14 @@ async function getConversation(id: any) {
 }
 
 
-export default async function ConversationComponent( { params }: any) {
+export default async function Chat( { params }: any) {
     const conversation = await getConversation(params.id);
+
     return (
         <main>
-            <p>{conversation.name}</p>
+            <ConversationComponent 
+                conversation={conversation}
+            />
         </main>
     );
 }

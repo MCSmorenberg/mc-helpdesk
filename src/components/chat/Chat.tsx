@@ -26,7 +26,8 @@ const Chat = () => {
   };
 
   return (
-    <div>
+    <div className="card">
+      <h2>New chat</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
