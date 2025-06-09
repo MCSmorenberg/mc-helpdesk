@@ -1,4 +1,4 @@
-import { Conversations } from "@/src/components/chat/Conversations";
+import { ConversationsList } from "@/src/components/chat/ConversationsList";
 
 export default function ChatLayout({
   children,
@@ -7,7 +7,7 @@ export default function ChatLayout({
 }) {
   return (
     <section>
-      <Conversations />
+      <ConversationsList />
       {children}
     </section>
   );

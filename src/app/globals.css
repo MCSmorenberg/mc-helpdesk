@@ -97,3 +97,45 @@ form select {
 form button {
   @apply block mx-auto;
 }
+
+.error {
+  @apply
+  border-2
+  border-red-500
+  bg-red-300
+  text-red-800
+  py-1 px-2
+  /* rounded-smblock */
+  max-w-fit
+  my-4 mx-auto;
+}
+
+.card {
+  @apply
+    bg-white
+    shadow-sm
+    rounded-md
+    py-3 px-4 my-4
+    relative
+    overflow-hidden;
+}
+
+.card {
+  @apply
+    bg-white
+    shadow-sm
+    rounded-md
+    py-3 px-4 my-4
+    relative
+    overflow-hidden;
+}
+
+.card h3 {
+  @apply
+    font-bold text-gray-700 text-sm
+    mb-0;
+}
+
+.card p {
+  @apply my-4 text-sm leading-6;
+}
