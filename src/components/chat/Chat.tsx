@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import {logout} from "@/src/app/(routes)/login/actions"
 import { getGroqChatCompletion } from '../../app/api/groq/main';
 
 const Chat = () => {
@@ -27,6 +28,7 @@ const Chat = () => {
 
   return (
     <div className="card">
+      <button onClick={() => logout()}>Logout</button>
       <h2>New chat</h2>
       <form onSubmit={handleSubmit}>
         <input
